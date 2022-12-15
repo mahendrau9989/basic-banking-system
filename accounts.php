@@ -59,7 +59,7 @@
     </thead>
     <tbody>
     <?php 
-        $conn=new mysqli("sql306.epizy.com","epiz_33125027","8ebnPRtOVSK","epiz_33125027_bank");
+        $conn=new mysqli("","","","");
         $sql="select * from account;";
 
         $result = $conn->query($sql);
