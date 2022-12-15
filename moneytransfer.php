@@ -64,7 +64,7 @@
           <td id="a2"><label for="">Select Payee</label></td>
           <td>
             <?php 
-                $conn=new mysqli("sql306.epizy.com","epiz_33125027","8ebnPRtOVSK","epiz_33125027_bank");
+                $conn=new mysqli("","","","");
                 $sql="select * from account;";
 
                 $result = $conn->query($sql);
@@ -140,7 +140,7 @@
   }
   function transfer(){
       <?php
-        $conn=new mysqli("sql306.epizy.com","epiz_33125027","8ebnPRtOVSK","epiz_33125027_bank");
+        $conn=new mysqli("","","","");
         $cu_id = $_POST['cu_id'];
         $amo = $_POST['amo'];
         $sql1="select * from account;";
@@ -164,7 +164,7 @@
                "WHERE customer_id = $cu_id" ;
         $result = $conn->query($sql);
 
-        if($sql){
+        if($result){
             header("Location: http://banking-app.great-site.net/success.html");
         }
 
